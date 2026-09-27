@@ -1030,6 +1030,9 @@ button.read-more-btn.expanded svg{transform:rotate(180deg);}
     var cells = Array.prototype.slice.call(row.querySelectorAll('.symbol-cell'));
     function updateDots(){
       if (!dots.length || !cells.length) return;
+      var scrollable = row.scrollWidth > row.clientWidth + 2;
+      if (dotsWrap) dotsWrap.style.display = scrollable ? '' : 'none';
+      if (!scrollable) return;
       var center = row.scrollLeft + row.clientWidth / 2;
       var activeIndex = 0;
       var bestDist = Infinity;
