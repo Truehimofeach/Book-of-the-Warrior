@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: додати рядок Sitemap з фінальним доменом після деплою, наприклад:
+# Sitemap: https://ваш-домен/sitemap.xml
